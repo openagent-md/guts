@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts/bindings"
 )
 
 func TestParseSingle(t *testing.T) {

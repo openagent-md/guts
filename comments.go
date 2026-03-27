@@ -8,7 +8,7 @@ import (
 
 	"golang.org/x/tools/go/packages"
 
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts/bindings"
 )
 
 func (p *GoParser) CommentForObject(obj types.Object) []bindings.SyntheticComment {

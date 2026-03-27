@@ -1,4 +1,4 @@
-module github.com/coder/guts
+module github.com/openagent-md/guts
 
 go 1.24.0
 

@@ -3,7 +3,7 @@ package guts
 import (
 	"fmt"
 
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts/bindings"
 )
 
 type typescriptNode struct {

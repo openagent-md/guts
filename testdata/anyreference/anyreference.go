@@ -1,8 +1,8 @@
 package anyreference
 
 import (
-	"github.com/coder/guts/testdata/anyreference/reference"
-	"github.com/coder/guts/testdata/prefix"
+	"github.com/openagent-md/guts/testdata/anyreference/reference"
+	"github.com/openagent-md/guts/testdata/prefix"
 )
 
 type ExampleStruct struct {

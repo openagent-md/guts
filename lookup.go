@@ -5,7 +5,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts/bindings"
 )
 
 func (ts *Typescript) location(obj types.Object) bindings.Source {

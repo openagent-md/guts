@@ -1,6 +1,6 @@
 package guts
 
-import "github.com/coder/guts/bindings"
+import "github.com/openagent-md/guts/bindings"
 
 // Some references are built into either Golang or Typescript.
 var (

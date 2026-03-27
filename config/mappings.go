@@ -1,8 +1,8 @@
 package config
 
 import (
-	"github.com/coder/guts"
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts"
+	"github.com/openagent-md/guts/bindings"
 )
 
 func OverrideLiteral(keyword bindings.LiteralKeyword) guts.TypeOverride {

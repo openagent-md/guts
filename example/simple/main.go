@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/coder/guts"
-	"github.com/coder/guts/config"
+	"github.com/openagent-md/guts"
+	"github.com/openagent-md/guts/config"
 )
 
 // SimpleType is a simple struct with a generic type
@@ -23,7 +23,7 @@ type SecondaryType struct {
 func main() {
 	golang, _ := guts.NewGolangParser()
 	// Generate the typescript types for this package
-	_ = golang.IncludeGenerate("github.com/coder/guts/example/simple")
+	_ = golang.IncludeGenerate("github.com/openagent-md/guts/example/simple")
 	// Map time.Time to string
 	_ = golang.IncludeCustom(map[string]string{
 		"time.Time": "string",
@@ -32,7 +32,7 @@ func main() {
 	golang.IncludeCustomDeclaration(config.StandardMappings())
 
 	// Exclude SecondaryType from output
-	_ = golang.ExcludeCustom("github.com/coder/guts/example/simple.SecondaryType")
+	_ = golang.ExcludeCustom("github.com/openagent-md/guts/example/simple.SecondaryType")
 
 	// Optionally bring over the golang comments to the typescript output
 	golang.PreserveComments()

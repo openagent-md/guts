@@ -7,9 +7,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/coder/guts"
-	"github.com/coder/guts/bindings"
-	"github.com/coder/guts/bindings/walk"
+	"github.com/openagent-md/guts"
+	"github.com/openagent-md/guts/bindings"
+	"github.com/openagent-md/guts/bindings/walk"
 )
 
 // SimplifyOptional removes the null type from union types that have a question

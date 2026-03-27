@@ -16,8 +16,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/coder/guts"
-	"github.com/coder/guts/config"
+	"github.com/openagent-md/guts"
+	"github.com/openagent-md/guts/config"
 )
 
 func ExampleNewGolangParser() {
@@ -28,15 +28,15 @@ func ExampleNewGolangParser() {
 	// Pass in the directory of the package you want to convert.
 	// You can mark a package as 'false' to include it as a reference, but not
 	// generate types for it.
-	_ = gen.IncludeGenerate("github.com/coder/guts/testdata/generics")
+	_ = gen.IncludeGenerate("github.com/openagent-md/guts/testdata/generics")
 
 	// Default type mappings are useful, feel free to add your own
 	gen.IncludeCustomDeclaration(config.StandardMappings())
 	_ = gen.IncludeCustom(map[string]string{
 		// To configure a custom type for a golang type, use the full package path.
-		"github.com/coder/guts/testdata/generics.ExampleType": "string",
+		"github.com/openagent-md/guts/testdata/generics.ExampleType": "string",
 		// You can use golang type syntax to specify a type.
-		"github.com/coder/guts/testdata/generics.AnotherExampleType": "map[string]*string",
+		"github.com/openagent-md/guts/testdata/generics.AnotherExampleType": "map[string]*string",
 	})
 
 	// ts is the typescript AST. It can be mutated before serializing.
@@ -85,14 +85,14 @@ func TestGeneration(t *testing.T) {
 
 			switch dir {
 			case "testdata/anyreference":
-				err = gen.IncludeReference("github.com/coder/guts/testdata/prefix", "Prefix")
+				err = gen.IncludeReference("github.com/openagent-md/guts/testdata/prefix", "Prefix")
 				require.NoErrorf(t, err, "include %q", dir)
 			case "testdata/excludecustom":
-				err = gen.ExcludeCustom("github.com/coder/guts/testdata/excludecustom.Secret")
+				err = gen.ExcludeCustom("github.com/openagent-md/guts/testdata/excludecustom.Secret")
 				require.NoErrorf(t, err, "exclude %q", dir)
 			case "testdata/alias":
 				err = gen.IncludeCustom(map[guts.GolangType]guts.GolangType{
-					"github.com/coder/guts/testdata/alias.RemappedAlias": "string",
+					"github.com/openagent-md/guts/testdata/alias.RemappedAlias": "string",
 				})
 				require.NoError(t, err)
 			}

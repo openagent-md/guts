@@ -5,7 +5,7 @@ import (
 
 	"github.com/dop251/goja"
 
-	typescriptengine "github.com/coder/guts/typescript-engine"
+	typescriptengine "github.com/openagent-md/guts/typescript-engine"
 )
 
 type Bindings struct {

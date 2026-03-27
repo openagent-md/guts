@@ -16,7 +16,7 @@ import (
 	"golang.org/x/tools/go/packages"
 	"golang.org/x/xerrors"
 
-	"github.com/coder/guts/bindings"
+	"github.com/openagent-md/guts/bindings"
 )
 
 type TypeOverride func() bindings.ExpressionType
